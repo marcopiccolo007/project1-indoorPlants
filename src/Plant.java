@@ -6,7 +6,8 @@ public class Plant {
 
     //atributty tridy
     private String name;
-    private List<String> notes; //pokud ma poznamka v kolekci nest v sobe vice informaci nez jednoduchy text,
+    private List<String> notes; //pokud ma poznamka
+    // v kolekci nest v sobe vice informaci nez jednoduchy text,
     //tak mozne vytvorit novou tridu Note v projektu
     private LocalDate planted;
     private LocalDate watering;
@@ -22,32 +23,30 @@ public class Plant {
         this.frequencyOfWatering = frequencyOfWatering;
     }
 
-    //2. kontruktor, který nastaví jako poznámku prázdný řetězec a datum zasazení i datum poslední zálivky nastaví na dnešní datum
+    //2. kontruktor, který nastaví jako poznámku prázdný řetězec
+    // a datum zasazení i datum poslední zálivky nastaví na dnešní datum
     public Plant(String name, int frequencyOfWatering) {
         this.name = name;
         this.notes = new ArrayList<>();
         this.notes.add("");
+        //alternativni jdnoradkovy zapis: this.notes = new ArrayList<>(List.of(""))
         this.planted = LocalDate.now();
         this.watering = LocalDate.now();
         this.frequencyOfWatering = frequencyOfWatering;
+        //alternativni kratsi zapis konstruktoru
     }
-    //3. stejný konstruktor jako čílo 2. a navíc nastaví výchozí frekvenci zálivky na 7 dnů
+
+    //3. stejný konstruktor jako číslo 2. plus nastaví výchozí frekvenci zálivky na 7 dnů
     public Plant(String name) {
-        this.name = name;
-        this.notes = new ArrayList<>();
-        this.notes.add("test poznamka");
-        this.planted = LocalDate.now();
-        this.watering = LocalDate.now();
-        this.frequencyOfWatering = 7;
+        this(name, new ArrayList<>(List.of("")), LocalDate.now(), LocalDate.now(), 7);
     }
 
-    //pristupove metody (gettery a settery)
-
-    public String getName () {
+    //pristupove metody (region gettery a settery)
+    public String getName() {
         return name;
     }
 
-    public void setName (String name) {
+    public void setName(String name) {
         this.name = name;
     }
 
@@ -87,16 +86,25 @@ public class Plant {
         this.frequencyOfWatering = frequencyOfWatering;
     }
 
-    //pristupove metody (getWateringInfo)
-    //Vrátí textovou informaci obsahující název květiny, datum poslední zálivky
-    //a datum doporučené další zálivky.
 
+    //pristupove metody (region specialni metody)
+    public String getWateringInfo() {
+        LocalDate nextWatering = watering.plusDays(frequencyOfWatering);
+        String wateringInfo = ("Název květiny: " +name+
+                "\nDatum poslední zálivky: " +watering+
+                "\nDatum doporučené další zálivky: " +nextWatering);
+        return wateringInfo;
+    }
 
-
-
-    //pristupove metody (doWateringNow())
-    //Nastaví datum poslední zálivky na dnešní den.
-
-
+    public LocalDate doWateringNow() {
+        watering = LocalDate.now();
+        return watering;
+    }
+    //alternativni zapis
+    /*
+    public void doWateringNow() {
+        this.watering = LocalDate.now();
+    }
+     */
 
 }
