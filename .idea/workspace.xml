@@ -4,15 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f9f6c7ea-5805-4cec-b956-c9bd66df8c26" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project1-indoorPlants.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Plant.java" afterDir="false" />
+    <list default="true" id="f9f6c7ea-5805-4cec-b956-c9bd66df8c26" name="Changes" comment="dokonceni Ukol 1 (Model dat) a Ukol 2 (Metody) na tride Plant; vytvoreni tridy PlantsManager (sprava seznamu kvetin)">
+      <change afterPath="$PROJECT_DIR$/src/PlantException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Plant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Plant.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +18,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Exception" />
         <option value="Class" />
       </list>
     </option>
@@ -29,23 +26,42 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2zSdnZ7DXIZMhGkNp5ydOzfo9FR" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/marmaly/IdeaProjects/JavaAcademy_DU/project1-indoorPlants",
     "onboarding.tips.debug.path": "C:/Users/marmaly/IdeaProjects/JavaAcademy_DU/project1-indoorPlants/src/Main.java"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="project1-indoorPlants" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -55,17 +71,57 @@
       <option name="presentableId" value="Default" />
       <updated>1751728578743</updated>
     </task>
+    <task id="LOCAL-00001" summary="vytvoreni projektu, vytvoreni tridy Plant (Ukol 1)">
+      <option name="closed" value="true" />
+      <created>1751729486855</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1751729486855</updated>
+    </task>
+    <task id="LOCAL-00002" summary="trida Plant (Ukol 1) - doplneni konstruktoru">
+      <option name="closed" value="true" />
+      <created>1751732005469</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1751732005469</updated>
+    </task>
+    <task id="LOCAL-00003" summary="trida Plant (Ukol 1) - oprava chyby v konstruktoru (pridani default poznamky) a pridani zakladnich pristupovych metod (gettery a settery)">
+      <option name="closed" value="true" />
+      <created>1751749943895</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1751749943895</updated>
+    </task>
+    <task id="LOCAL-00004" summary="dokonceni Ukol 1 (Model dat) a Ukol 2 (Metody) na tride Plant; vytvoreni tridy PlantsManager (sprava seznamu kvetin)">
+      <option name="closed" value="true" />
+      <created>1751812547035</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1751812547035</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Main.java</url>
-          <line>11</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="vytvoreni projektu, vytvoreni tridy Plant (Ukol 1)" />
+    <MESSAGE value="trida Plant (Ukol 1) - doplneni konstruktoru" />
+    <MESSAGE value="trida Plant (Ukol 1) - oprava chyby v konstruktoru (pridani default poznamky) a pridani zakladnich pristupovych metod (gettery a settery)" />
+    <MESSAGE value="dokonceni Ukol 1 (Model dat) a Ukol 2 (Metody) na tride Plant; vytvoreni tridy PlantsManager (sprava seznamu kvetin)" />
+    <option name="LAST_COMMIT_MESSAGE" value="dokonceni Ukol 1 (Model dat) a Ukol 2 (Metody) na tride Plant; vytvoreni tridy PlantsManager (sprava seznamu kvetin)" />
   </component>
 </project>
