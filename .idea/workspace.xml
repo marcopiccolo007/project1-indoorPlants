@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f9f6c7ea-5805-4cec-b956-c9bd66df8c26" name="Changes" comment="dokonceni Ukol 1 (Model dat) a Ukol 2 (Metody) na tride Plant; vytvoreni tridy PlantsManager (sprava seznamu kvetin)">
-      <change afterPath="$PROJECT_DIR$/src/PlantException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Plant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Plant.java" afterDir="false" />
-    </list>
+    <list default="true" id="f9f6c7ea-5805-4cec-b956-c9bd66df8c26" name="Changes" comment="dokonceni Ukolu 3 (Ošetření nesprávného vstupu); aplikace vyjimek tridy PlantsException; upravy metod getWateringInfo, setFrequencyOfWatering, setWatering a uprava konstrukturu na tride Plant" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -103,7 +98,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751812547035</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="dokonceni Ukolu 3 (Ošetření nesprávného vstupu); aplikace vyjimek tridy PlantsException; upravy metod getWateringInfo, setFrequencyOfWatering, setWatering a uprava konstrukturu na tride Plant">
+      <option name="closed" value="true" />
+      <created>1752529886291</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1752529886291</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -122,6 +125,7 @@
     <MESSAGE value="trida Plant (Ukol 1) - doplneni konstruktoru" />
     <MESSAGE value="trida Plant (Ukol 1) - oprava chyby v konstruktoru (pridani default poznamky) a pridani zakladnich pristupovych metod (gettery a settery)" />
     <MESSAGE value="dokonceni Ukol 1 (Model dat) a Ukol 2 (Metody) na tride Plant; vytvoreni tridy PlantsManager (sprava seznamu kvetin)" />
-    <option name="LAST_COMMIT_MESSAGE" value="dokonceni Ukol 1 (Model dat) a Ukol 2 (Metody) na tride Plant; vytvoreni tridy PlantsManager (sprava seznamu kvetin)" />
+    <MESSAGE value="dokonceni Ukolu 3 (Ošetření nesprávného vstupu); aplikace vyjimek tridy PlantsException; upravy metod getWateringInfo, setFrequencyOfWatering, setWatering a uprava konstrukturu na tride Plant" />
+    <option name="LAST_COMMIT_MESSAGE" value="dokonceni Ukolu 3 (Ošetření nesprávného vstupu); aplikace vyjimek tridy PlantsException; upravy metod getWateringInfo, setFrequencyOfWatering, setWatering a uprava konstrukturu na tride Plant" />
   </component>
 </project>
