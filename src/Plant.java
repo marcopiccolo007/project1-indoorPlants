@@ -8,13 +8,11 @@ public class Plant {
     DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd. MM. yyyy");
 
     //atributty tridy
-    private String name;
-    private List<String> notes; //pokud ma poznamka
-    // v kolekci nest v sobe vice informaci nez jednoduchy text,
-    //tak mozne vytvorit novou tridu Note v projektu
-    private LocalDate planted;
-    private LocalDate watering;
-    private int frequencyOfWatering;
+    private String name;//nazev rostliny
+    private List<String> notes;
+    private LocalDate planted;//datum, kdy byla rostlina zasazena
+    private LocalDate watering;//datum poslední zálivky
+    private int frequencyOfWatering;//frekvence zálivky ve dnech
 
     //konstruktory
     //1. konstruktor pro nastavení všech atributů
@@ -34,14 +32,13 @@ public class Plant {
     }
 
     //2. kontruktor, který nastaví jako poznámku prázdný řetězec
-    // a datum zasazení i datum poslední zálivky nastaví na dnešní datum
+    //+ datum zasazení i datum poslední zálivky nastaví na dnešní datum
     public Plant(String name, int frequencyOfWatering) throws PlantException {
         if (frequencyOfWatering < 1) {
-            throw new PlantException("Frekvence zálivky nesmí být nižší než 1 (zadal jsi : " + frequencyOfWatering + ")");
+            throw new PlantException("Frekvence zálivky nesmí být nižší než 1 (zadal jsi : "
+                    + frequencyOfWatering + ")");
         }
         this.name = name;
-        //this.notes = new ArrayList<>();
-        //this.notes.add("");
         this.notes = new ArrayList<>(List.of(""));
         this.planted = LocalDate.now();
         this.watering = LocalDate.now();
@@ -49,7 +46,6 @@ public class Plant {
     }
 
     //3. stejný konstruktor jako číslo 2. plus nastaví výchozí frekvenci zálivky na 7 dnů
-    //alternativni kratsi zapis konstruktoru
     public Plant(String name) throws PlantException {
         this(name, new ArrayList<>(List.of("")), LocalDate.now(), LocalDate.now(), 7);
     }
@@ -71,7 +67,7 @@ public class Plant {
         this.notes = notes;
     }
 
-    public void setNote(String note) {
+    public void addNote(String note) {
         notes.add(note);
     }
 
@@ -95,13 +91,23 @@ public class Plant {
         this.watering = watering;
     }
 
+    public LocalDate getNextWateringDate() throws PlantException {
+        if(watering == null || frequencyOfWatering < 1) {
+            throw new PlantException("Není možné dopočítat příští datum zálivky " +
+                    "(uložená data - poslední zálivka: " +watering +
+                    ", frekvence zálivky: " + frequencyOfWatering + ")");
+        }
+        return watering.plusDays(frequencyOfWatering);
+    }
+
     public int getFrequencyOfWatering() {
         return frequencyOfWatering;
     }
 
     public void setFrequencyOfWatering(int frequencyOfWatering) throws PlantException {
         if (frequencyOfWatering < 1) {
-            throw new PlantException("Frekvence zálivky nesmí být nižší než 1 (zadal jsi : " + frequencyOfWatering + ")");
+            throw new PlantException("Frekvence zálivky nesmí být nižší než 1 (zadal jsi : "
+                    + frequencyOfWatering + ")");
         }
         this.frequencyOfWatering = frequencyOfWatering;
     }
