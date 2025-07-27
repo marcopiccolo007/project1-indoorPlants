@@ -1,0 +1,14 @@
+name	notes	planted	watering	frequency
+Fialka 1	Popis fialky - je fialová a hezká	2021-01-01	2021-05-12	3
+Royal Rose	kralovska ruze,citliva na chlad	2025-07-07	2025-07-14	7
+Sukulent v koupelně	Nezalévá se	2011-03-01	2011-03-01	365
+Tulipán na prodej 1	prodej tulipánu 1	2025-07-27	2025-07-27	14
+Tulipán na prodej 10	prodej tulipánu 10	2025-07-27	2025-07-27	14
+Tulipán na prodej 2	prodej tulipánu 2	2025-07-27	2025-07-27	14
+Tulipán na prodej 3	prodej tulipánu 3	2025-07-27	2025-07-27	14
+Tulipán na prodej 4	prodej tulipánu 4	2025-07-27	2025-07-27	14
+Tulipán na prodej 5	prodej tulipánu 5	2025-07-27	2025-07-27	14
+Tulipán na prodej 6	prodej tulipánu 6	2025-07-27	2025-07-27	14
+Tulipán na prodej 7	prodej tulipánu 7	2025-07-27	2025-07-27	14
+Tulipán na prodej 8	prodej tulipánu 8	2025-07-27	2025-07-27	14
+Tulipán na prodej 9	prodej tulipánu 9	2025-07-27	2025-07-27	14

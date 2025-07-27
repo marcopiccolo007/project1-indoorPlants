@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f9f6c7ea-5805-4cec-b956-c9bd66df8c26" name="Changes" comment="dokonceni Ukolu 3 (Ošetření nesprávného vstupu); aplikace vyjimek tridy PlantsException; upravy metod getWateringInfo, setFrequencyOfWatering, setWatering a uprava konstrukturu na tride Plant">
+    <list default="true" id="f9f6c7ea-5805-4cec-b956-c9bd66df8c26" name="Changes" comment="dokonceni Ukolu 4 (metody pro tridu PlantsManager)">
+      <change afterPath="$PROJECT_DIR$/ressources/kvetiny_IN.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ressources/kvetiny_OUT.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Settings.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Plant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Plant.java" afterDir="false" />
@@ -49,17 +52,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/marmaly/IdeaProjects/JavaAcademy_DU/project1-indoorPlants&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/marmaly/IdeaProjects/JavaAcademy_DU/project1-indoorPlants/src/Main.java&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/marmaly/IdeaProjects/JavaAcademy_DU/project1-indoorPlants/ressources",
+    "onboarding.tips.debug.path": "C:/Users/marmaly/IdeaProjects/JavaAcademy_DU/project1-indoorPlants/src/Main.java"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\marmaly\IdeaProjects\JavaAcademy_DU\project1-indoorPlants\ressources" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\marmaly\IdeaProjects\JavaAcademy_DU\project1-indoorPlants\ressources" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -131,7 +142,15 @@
       <option name="project" value="LOCAL" />
       <updated>1752601393577</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="dokonceni Ukolu 4 (metody pro tridu PlantsManager)">
+      <option name="closed" value="true" />
+      <created>1753474222557</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1753474222557</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -151,6 +170,7 @@
     <MESSAGE value="trida Plant (Ukol 1) - oprava chyby v konstruktoru (pridani default poznamky) a pridani zakladnich pristupovych metod (gettery a settery)" />
     <MESSAGE value="dokonceni Ukol 1 (Model dat) a Ukol 2 (Metody) na tride Plant; vytvoreni tridy PlantsManager (sprava seznamu kvetin)" />
     <MESSAGE value="dokonceni Ukolu 3 (Ošetření nesprávného vstupu); aplikace vyjimek tridy PlantsException; upravy metod getWateringInfo, setFrequencyOfWatering, setWatering a uprava konstrukturu na tride Plant" />
-    <option name="LAST_COMMIT_MESSAGE" value="dokonceni Ukolu 3 (Ošetření nesprávného vstupu); aplikace vyjimek tridy PlantsException; upravy metod getWateringInfo, setFrequencyOfWatering, setWatering a uprava konstrukturu na tride Plant" />
+    <MESSAGE value="dokonceni Ukolu 4 (metody pro tridu PlantsManager)" />
+    <option name="LAST_COMMIT_MESSAGE" value="dokonceni Ukolu 4 (metody pro tridu PlantsManager)" />
   </component>
 </project>

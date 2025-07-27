@@ -3,7 +3,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Plant {
+public class Plant implements Comparable<Plant> {
 
     DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd. MM. yyyy");
 
@@ -19,9 +19,9 @@ public class Plant {
     public Plant(String name, List<String> notes, LocalDate planted,
                  LocalDate watering, int frequencyOfWatering) throws PlantException {
         if (frequencyOfWatering < 1) {
-            throw new PlantException("Frekvence zálivky nesmí být nižší než 1 (zadal jsi : "+ frequencyOfWatering +")");
+            throw new PlantException("\nFrekvence zálivky nesmí být nižší než 1 (zadal jsi : "+ frequencyOfWatering +")");
         } else if (watering.isBefore(planted)) {
-            throw new PlantException("Datum zálivky nesmí být starší než datum zasazení ("
+            throw new PlantException("\nDatum zálivky nesmí být starší než datum zasazení ("
                     + planted.format(formatter) + "), zadal jsi: " + watering.format(formatter));
         }
         this.name = name;
@@ -35,7 +35,7 @@ public class Plant {
     //+ datum zasazení i datum poslední zálivky nastaví na dnešní datum
     public Plant(String name, int frequencyOfWatering) throws PlantException {
         if (frequencyOfWatering < 1) {
-            throw new PlantException("Frekvence zálivky nesmí být nižší než 1 (zadal jsi : "
+            throw new PlantException("\nFrekvence zálivky nesmí být nižší než 1 (zadal jsi : "
                     + frequencyOfWatering + ")");
         }
         this.name = name;
@@ -55,7 +55,10 @@ public class Plant {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(String name) throws PlantException {
+        if(name == null || name.isBlank()) {
+            throw new PlantException("\nNázev rostliny nesmí být prázdný.");
+        }
         this.name = name;
     }
 
@@ -84,16 +87,16 @@ public class Plant {
     }
 
     public void setWatering(LocalDate watering) throws PlantException {
-        if (watering.isBefore(planted)) {
-            throw new PlantException("Datum zálivky nesmí být starší než datum zasazení ("
-                    + planted.format(formatter) + "), zadal jsi: " + watering.format(formatter));
+        if (watering == null || watering.isBefore(planted)) {
+            throw new PlantException("\nDatum zálivky nesmí být NULL anebo starší než datum zasazeni ("
+                    + planted.format(formatter) + "). Zadana hodnota je: " + watering.format(formatter));
         }
         this.watering = watering;
     }
 
     public LocalDate getNextWateringDate() throws PlantException {
         if(watering == null || frequencyOfWatering < 1) {
-            throw new PlantException("Není možné dopočítat příští datum zálivky " +
+            throw new PlantException("\nNení možné dopočítat příští datum zálivky " +
                     "(uložená data - poslední zálivka: " +watering +
                     ", frekvence zálivky: " + frequencyOfWatering + ")");
         }
@@ -106,7 +109,7 @@ public class Plant {
 
     public void setFrequencyOfWatering(int frequencyOfWatering) throws PlantException {
         if (frequencyOfWatering < 1) {
-            throw new PlantException("Frekvence zálivky nesmí být nižší než 1 (zadal jsi : "
+            throw new PlantException("\nFrekvence zálivky nesmí být nižší než 1 (zadana hodnota je: "
                     + frequencyOfWatering + ")");
         }
         this.frequencyOfWatering = frequencyOfWatering;
@@ -126,5 +129,24 @@ public class Plant {
     public void doWateringNow() {
         this.watering = LocalDate.now();
     }
+
+    @Override
+    //metoda pro porovnání dvou rostlin podle jejich názvu
+    public int compareTo(Plant otherPlant) {
+        return this.name.compareToIgnoreCase(otherPlant.name);
+    }
+
+    @Override
+    public String toString() {
+        return "Plant{" +
+                "name='" + name + '\'' +
+                ", notes=" + notes +
+                ", planted=" + planted.format(formatter) +
+                ", watering=" + watering.format(formatter) +
+                ", frequencyOfWatering=" + frequencyOfWatering +
+                '}';
+    }
+
+
 
 }
