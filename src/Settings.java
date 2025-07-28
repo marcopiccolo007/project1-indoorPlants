@@ -5,8 +5,9 @@ public class Settings {
 
     private static final String FILE_NAME_IN = "ressources/kvetiny_IN.txt";
     private static final String FILE_NAME_OUT = "ressources/kvetiny_OUT.txt";
-    private static final String DELIMITER = "\t"; //// "\t" pro tabulátor
-    private static final String FILE_HEADER = "name\tnotes\tplanted\twatering\tfrequency";
+    private static final String DELIMITER = "\t"; // "\t" pro tabulátor
+    private static final String FILE_HEADER =
+            "name\tnotes\tfrequency\twatering\tplanted";
 
     public static String getFileNameIn() {
         return FILE_NAME_IN;

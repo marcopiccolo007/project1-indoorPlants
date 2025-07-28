@@ -146,7 +146,4 @@ public class Plant implements Comparable<Plant> {
                 ", frequencyOfWatering=" + frequencyOfWatering +
                 '}';
     }
-
-
-
-}
+}//konec třídy Plant

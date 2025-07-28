@@ -99,7 +99,7 @@ public class PlantsManager {
             Collections.sort(this.plantList); //seřazení plantList podle jména květin
         } catch (IOException e) {
             System.out.println("Soubor nelze načíst: " + e.getMessage());
-            this.plantList = new ArrayList<>(); // aplikace pokračuje, seznam prázdný
+            this.plantList = new ArrayList<>(); //aplikace pokračuje (na výstupu prázdný seznam)
         }
     }
 
@@ -108,9 +108,9 @@ public class PlantsManager {
         try {
             String name = parts[0].trim();
             List<String> notes = Arrays.asList(parts[1].trim().split(","));
-            LocalDate planted = LocalDate.parse(parts[2].trim());
+            int frequencyOfWatering = Integer.parseInt(parts[2].trim());
             LocalDate watering = LocalDate.parse(parts[3].trim());
-            int frequencyOfWatering = Integer.parseInt(parts[4].trim());
+            LocalDate planted = LocalDate.parse(parts[4].trim());
             Plant plant = new Plant(name, notes, planted, watering, frequencyOfWatering);
             plantList.add(plant);
         } catch (DateTimeParseException e) {
@@ -129,18 +129,18 @@ public class PlantsManager {
             throw new PlantException("Seznam květin je prázdný, nejsou data k uložení do souboru.");
         }
         try (PrintWriter writer = new PrintWriter(new BufferedWriter(new FileWriter(fileName)))) {
-            writer.println("name\tnotes\tplanted\twatering\tfrequency");//pridani hlavicky souboru
+            writer.println("name\tnotes\tfrequency\twatering\tplanted");//pridani hlavicky souboru
             for (Plant plant : plantList) {
                 String line = String.join(delimiter,
                         plant.getName(),
                         String.join(",", plant.getNotes()),
-                        plant.getPlanted().toString(),
+                        String.valueOf(plant.getFrequencyOfWatering()),
                         plant.getWatering().toString(),
-                        String.valueOf(plant.getFrequencyOfWatering()));
+                        plant.getPlanted().toString());
                 writer.println(line);
             }
         } catch (IOException e) {
             throw new PlantException("Chyba při zápisu do souboru: " + fileName + "\n" + e.getMessage());
         }
     }
-}
+}//konec třídy PlantsManager

@@ -56,7 +56,7 @@ public class Main {
         //8. Test seřazení rostlin ve správci seznamu podle různých kritérií
         // + výpis seřazeného seznamu
 
-        System.out.println("\nNový seznam květin - výchozí řazení seznamu rostlin (dle názvu vzestupně):");
+        System.out.println("\nNový seznam květin - výchozí řazení seznamu rostlin(dle názvu vzestupně):");
         for (Plant plant : manager.getPlants()) {
             //System.out.println(plant.toString());
             System.out.println(plant.getWateringInfo());
